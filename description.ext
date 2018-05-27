@@ -1,0 +1,61 @@
+author = "BangaBob"; 
+onLoadMission = "Standby For orders";
+onLoadName = "Hitman | Contract Killer";
+loadScreen =  "picture\contractKiller.jpg";
+disabledAI = 1;
+
+// REQUIRED FOR BRS DO NOT EDIT
+#include "defines.hpp"
+#include "dialogs.hpp"
+class Header
+{
+	gameType = RPG; // Game type, see 'class' columns in the table below
+	minPlayers = 1; //min # of players the mission supports
+	maxPlayers = 1; //max # of players the mission supports
+};
+class CfgSounds
+{
+	// List of sounds (.ogg files without the .ogg extension)
+	sounds[] = {terminatedSFX};
+
+	// Definition for each sound
+	class terminatedSFX
+	{
+		name = "terminatedSFX"; // Name for mission editor
+		sound[] = {\sound\terminatedSFX.ogg, db + 2, 1.0};
+		titles[] = {0, ""};
+	};
+	class PHONECALL
+	{
+		name = "";
+		sound[] = {"\sound\Telephone.ogg", db+0, 1.0};
+		titles[] = {0, ""};
+	};
+};
+
+class CfgMusic
+{
+	tracks[]={};
+
+	class wantedOne
+	{
+		name = "";
+		sound[] = {"\sound\Antrozous.ogg", db-15, 1.0};
+	};
+	class wantedTwo
+	{
+		name = "";
+		sound[] = {"\sound\Molossus.ogg", db-15, 1.0};
+	};
+	class themeOne
+	{
+		name = "";
+		sound[] = {"\sound\Corynorhinus.ogg", db-15, 1.0};
+	};
+	class themeTwo
+	{
+		name = "";
+		sound[] = {"\sound\Elder_Scrolls_Music.ogg", db-15, 1.0};
+	};
+
+};
